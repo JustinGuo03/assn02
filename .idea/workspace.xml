@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="597b3cb3-59a7-4972-bf7f-3c30f9d8be7f" name="Changes" comment="it worked?">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="597b3cb3-59a7-4972-bf7f-3c30f9d8be7f" name="Changes" comment="i beg please work">
       <change beforePath="$PROJECT_DIR$/src/assn02/JavaWarmUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assn02/JavaWarmUp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675213468510</updated>
       <workItem from="1675213472085" duration="1370000" />
-      <workItem from="1675235434305" duration="1414000" />
+      <workItem from="1675235434305" duration="1496000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1675213550641</created>
@@ -110,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675279618835</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="i beg please work">
+      <created>1675281765730</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675281765730</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +130,7 @@
     <MESSAGE value="i am a dumbass" />
     <MESSAGE value="dumber and dumbest right here" />
     <MESSAGE value="it worked?" />
-    <option name="LAST_COMMIT_MESSAGE" value="it worked?" />
+    <MESSAGE value="i beg please work" />
+    <option name="LAST_COMMIT_MESSAGE" value="i beg please work" />
   </component>
 </project>
