@@ -61,7 +61,7 @@ public class JavaWarmUp{
             }
         }
 
-        double avgFee = (double) totalFee/(double) quantity;
+        double avgFee = (Math.round(100 * totalFee)/100)/(Math.round(100 * quantity)/100);
         double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
 
         System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %.2f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
@@ -82,7 +82,7 @@ public class JavaWarmUp{
             }
         }
 
-        double avgFee = (double) totalFee/(double) quantity;
+        double avgFee = (Math.round(100 * totalFee)/100)/(Math.round(100 * quantity)/100);
         double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
 
         System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
@@ -103,7 +103,7 @@ public class JavaWarmUp{
             }
         }
 
-        double avgFee = (double) totalFee/(double) quantity;
+        double avgFee = (Math.round(100 * totalFee)/100)/(Math.round(100 * quantity)/100);
         double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
 
         System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %.2f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
