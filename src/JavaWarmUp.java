@@ -10,7 +10,7 @@ public class JavaWarmUp{
         Product[] database = new Product[itemNum];
 
         String newItem = input.nextLine();
-        
+
         for (int i = 0; i<itemNum; i++){
             //System.out.print("Enter new item: ");
             newItem = input.nextLine();
@@ -29,7 +29,7 @@ public class JavaWarmUp{
                 largest = database[i];
             }
         }
-        
+
         System.out.printf(" When: %s %s\n Category: %s\n Price: %.2f\n", largest.date, largest.assemblyTime, largest.category, largest.fee);
     }
 

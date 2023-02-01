@@ -7,8 +7,8 @@ public class Product {
     public double time;
     public int cost;
 
-    public Product(String date, String assemblyTime, String category, 
-    String fee, String quantity, String time, String cost) {
+    public Product(String date, String assemblyTime, String category,
+                   String fee, String quantity, String time, String cost) {
         this.date = date;
         this.assemblyTime = assemblyTime;
         this.category = category;
