@@ -68,10 +68,10 @@ public class JavaWarmUp{
     }
 
     public static void laptopStat(Product[] database){
-        int quantity = 0;
-        int totalFee = 0;
-        int totalCosts = 0;
-        int workerCosts = 0;
+        double quantity = 0;
+        double totalFee = 0;
+        double totalCosts = 0;
+        double workerCosts = 0;
 
         for (int i = 0; i < database.length; i++) {
             if (database[i].category.equals("laptop")) {
@@ -82,8 +82,8 @@ public class JavaWarmUp{
             }
         }
 
-        double avgFee = (double) totalFee/(double) quantity;
-        double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
+        double avgFee = totalFee/quantity;
+        double avgProfits = (totalFee - totalCosts - workerCosts)/quantity;
 
         System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %.2f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
     }
