@@ -85,7 +85,7 @@ public class JavaWarmUp{
         double avgFee = (double) totalFee/(double) quantity;
         double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
 
-        System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %.2f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
+        System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
     }
 
     public static void watchStat(Product[] database){
