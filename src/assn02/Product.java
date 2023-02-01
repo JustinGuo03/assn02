@@ -1,123 +1,34 @@
-import java.util.Scanner;
+package assn02;
 
-public class JavaWarmUp{
-    public static void main(String args[]){
-        Scanner input = new Scanner(System.in);
+public class Product {
+    public String date;
+    public String assemblyTime;
+    public String category;
+    public double fee;
+    public double quantity;
+    public double time;
+    public int cost;
 
-        //System.out.print("How many items to be added to the database: ");
-        int itemNum = input.nextInt();
-
-        Product[] database = new Product[itemNum];
-
-        String newItem = input.nextLine();
-
-        for (int i = 0; i<itemNum; i++){
-            //System.out.print("Enter new item: ");
-            newItem = input.nextLine();
-
-            database[i] = new Product(newItem.split(" "));
-        }
-
-        printReport(database);
+    public Product(String date, String assemblyTime, String category, 
+    String fee, String quantity, String time, String cost) {
+        this.date = date;
+        this.assemblyTime = assemblyTime;
+        this.category = category;
+        this.fee = Double.parseDouble(fee);
+        this.quantity = Double.parseDouble(quantity);
+        this.time = Double.parseDouble(time);
+        this.cost = Integer.parseInt(cost);
     }
 
-    public static void highestAssemblyFee(Product[] database){
-        Product largest = database[0];
-
-        for (int i = 0; i < database.length; i++) {
-            if (database[i].fee >= largest.fee) {
-                largest = database[i];
-            }
-        }
-
-        System.out.printf(" When: %s %s\n Category: %s\n Price: %.2f\n", largest.date, largest.assemblyTime, largest.category, largest.fee);
+    public Product(String[] item) {
+        this.date = item[0];
+        this.assemblyTime = item[1];
+        this.category = item[2];
+        this.fee = Double.parseDouble(item[3]);
+        this.quantity = Double.parseDouble(item[4]);
+        this.time = Double.parseDouble(item[5]);
+        this.cost = Integer.parseInt(item[6]);
     }
 
-    public static void lowestAssemblyFee(Product[] database){
-        Product lowest = database[0];
 
-        for (int i = 0; i < database.length; i++) {
-            if (database[i].fee <= lowest.fee) {
-                lowest = database[i];
-            }
-        }
-
-        System.out.printf(" When: %s %s\n Category: %s\n Price: %.2f\n", lowest.date, lowest.assemblyTime, lowest.category, lowest.fee);
-    }
-
-    public static void phoneStat(Product[] database){
-        int quantity = 0;
-        int totalFee = 0;
-        int totalCosts = 0;
-        int workerCosts = 0;
-
-        for (int i = 0; i < database.length; i++) {
-            if (database[i].category.equals("phone")) {
-                quantity += database[i].quantity;
-                totalFee += database[i].quantity*database[i].fee;
-                totalCosts += database[i].cost;
-                workerCosts += database[i].time*16;
-            }
-        }
-
-        double avgFee = (double) totalFee/(double) quantity;
-        double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
-
-        System.out.printf(" Quantity: %d\n Average Assembling fee: %.2f\n Average Net Profit: %.2f\n", quantity, avgFee, avgProfits);
-    }
-
-    public static void laptopStat(Product[] database){
-        int quantity = 0;
-        int totalFee = 0;
-        int totalCosts = 0;
-        int workerCosts = 0;
-
-        for (int i = 0; i < database.length; i++) {
-            if (database[i].category.equals("laptop")) {
-                quantity += database[i].quantity;
-                totalFee += database[i].quantity*database[i].fee;
-                totalCosts += database[i].cost;
-                workerCosts += database[i].time*16;
-            }
-        }
-
-        double avgFee = (double) totalFee/(double) quantity;
-        double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
-
-        System.out.printf(" Quantity: %d\n Average Assembling fee: %.2f\n Average Net Profit: %.2f\n", quantity, avgFee, avgProfits);
-    }
-
-    public static void watchStat(Product[] database){
-        int quantity = 0;
-        int totalFee = 0;
-        int totalCosts = 0;
-        int workerCosts = 0;
-
-        for (int i = 0; i < database.length; i++) {
-            if (database[i].category.equals("smart_watch")) {
-                quantity += database[i].quantity;
-                totalFee += database[i].quantity*database[i].fee;
-                totalCosts += database[i].cost;
-                workerCosts += database[i].time*16;
-            }
-        }
-
-        double avgFee = (double) totalFee/(double) quantity;
-        double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
-
-        System.out.printf(" Quantity: %d\n Average Assembling fee: %.2f\n Average Net Profit: %.2f\n", quantity, avgFee, avgProfits);
-    }
-
-    public static void printReport(Product[] database){
-        System.out.println("Highest per unit assembling fee:");
-        highestAssemblyFee(database);
-        System.out.println("Lowest per unit assembling fee:");
-        lowestAssemblyFee(database);
-        System.out.println("Statistic of phone");
-        phoneStat(database);
-        System.out.println("Statistic of laptop");
-        laptopStat(database);
-        System.out.println("Statistic of smart_watch");
-        watchStat(database);
-    }
 }
