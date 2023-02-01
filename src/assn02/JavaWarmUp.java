@@ -31,7 +31,7 @@ public class JavaWarmUp{
             }
         }
 
-        System.out.printf(" When: %s %s\n Category: %s\n Price: %.2f\n", largest.date, largest.assemblyTime, largest.category, largest.fee);
+        System.out.printf("\tWhen: %s %s\n\tCategory: %s\n\tPrice: %.2f\n", largest.date, largest.assemblyTime, largest.category, largest.fee);
     }
 
     public static void lowestAssemblyFee(Product[] database){
@@ -43,7 +43,7 @@ public class JavaWarmUp{
             }
         }
 
-        System.out.printf(" When: %s %s\n Category: %s\n Price: %.2f\n", lowest.date, lowest.assemblyTime, lowest.category, lowest.fee);
+        System.out.printf("\tWhen: %s %s\n\tCategory: %s\n\tPrice: %.2f\n", lowest.date, lowest.assemblyTime, lowest.category, lowest.fee);
     }
 
     public static void phoneStat(Product[] database){
@@ -64,7 +64,7 @@ public class JavaWarmUp{
         double avgFee = (double) totalFee/(double) quantity;
         double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
 
-        System.out.printf(" Quantity: %d\n Average Assembling fee: %.2f\n Average Net Profit: %.2f\n", quantity, avgFee, avgProfits);
+        System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %.2f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
     }
 
     public static void laptopStat(Product[] database){
@@ -85,7 +85,7 @@ public class JavaWarmUp{
         double avgFee = (double) totalFee/(double) quantity;
         double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
 
-        System.out.printf(" Quantity: %d\n Average Assembling fee: %.2f\n Average Net Profit: %.2f\n", quantity, avgFee, avgProfits);
+        System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %.2f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
     }
 
     public static void watchStat(Product[] database){
@@ -106,7 +106,7 @@ public class JavaWarmUp{
         double avgFee = (double) totalFee/(double) quantity;
         double avgProfits = (double) (totalFee - totalCosts - workerCosts)/(double) quantity;
 
-        System.out.printf(" Quantity: %d\n Average Assembling fee: %.2f\n Average Net Profit: %.2f\n", quantity, avgFee, avgProfits);
+        System.out.printf("\tQuantity: %d\n\tAverage Assembling fee: %.2f\n\tAverage Net Profit: %.2f\n", quantity, avgFee, avgProfits);
     }
 
     public static void printReport(Product[] database){
